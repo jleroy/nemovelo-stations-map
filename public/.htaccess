@@ -1,0 +1,5 @@
+<FilesMatch ".+\.geojson$">
+    Header set Content-Type "application/geo+json"
+    Header set Access-Control-Allow-Origin "https://umap.openstreetmap.fr"
+    Header set Vary "Origin" 
+</FilesMatch>

@@ -1,0 +1,119 @@
+html,
+body,
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+html,
+body,
+#map,
+#legend_items ul {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#container,
+#legend,
+#legend_items ul,
+#legend_items ul li {
+    display: flex;
+}
+
+#legend {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #efefef;
+    background-color: #323737;
+    font-family: "Arial", sans-serif;
+    font-size: .85em;
+    font-weight: bold;
+}
+
+/* Hide legend if screen width is < 1024 px. */
+@media screen and (max-width: 1023px){
+    #legend {
+        display: none;
+    }
+}
+
+/* Hide only last update information if screen width is < 1150 px. */
+@media screen and (max-width: 1149px){
+    #legend_update {
+        display: none;
+    }
+}
+
+#legend,
+#legend_items ul {
+    flex-wrap: wrap;
+}
+
+#legend_items ul,
+#legend_items ul li {
+    list-style: none;
+}
+
+#legend_items ul li {
+    align-items: center;
+    margin: 1em .4em 1em 1em;
+    
+}
+
+#legend_items ul li span {
+    height: 1.4em;
+    width: 1.4em;
+    margin-right: .6em;
+}
+
+#legend_items ul li span.darkblue {
+    background: darkblue;
+}
+
+#legend_items ul li span.goldenrod {
+    background: goldenrod;
+}
+
+#legend_items ul li span.crimson {
+    background: crimson;
+}
+
+#legend_items ul li span.bike,
+#legend_items ul li span.ebike {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.4em;
+}
+
+#legend_items ul li span.bike {
+    background-image: url('/images/bike_white.svg');
+}
+
+#legend_items ul li span.ebike {
+    background-image: url('/images/ebike_white.svg');
+}
+
+#legend_update {
+    margin-left: auto;
+}
+
+#legend_update p {
+    margin: 1em;
+    text-align: right;
+}
+
+#map {
+    flex-grow: 1;
+    border: none;
+}
+
+#noscript {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}

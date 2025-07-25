@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Stations NemoVélo</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="js/refresh.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <!--
+                Icons from SVG Repo, under CC0 license (no attribution
+                required):
+                 - https://www.svgrepo.com/svg/308242/electric-bike-bicycle-clean-transport
+                 - https://www.svgrepo.com/svg/308322/ride-a-bike-bike-bicycle-ride
+            -->
+            <div id="legend">
+                <div id="legend_items">
+                    <ul>
+                        <li><span class="darkblue"></span>Station opérationnelle</li>
+                        <li><span class="crimson"></span>Aucun vélo disponible</li>
+                        <li><span class="goldenrod"></span>Aucun emplacement libre</li>
+                        <li><span class="bike"></span>Station passive</li>
+                        <li><span class="ebike"></span>Station électrifiée</li>
+                    </ul>
+                </div>
+
+                <div id="legend_update">
+                    <p id="last_update"></p>
+                </div>
+            </div>
+
+            <iframe 
+                id="map"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+                allow="geolocation; accelerometer; gyroscope; magnetometer;"
+                src="https://umap.openstreetmap.fr/fr/map/stations-nemovelo_1229605?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=false&searchControl=false&tilelayersControl=false&embedfalserol=false&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=false">
+            </iframe>
+
+            <noscript>
+              <p id="noscript">Veuillez autoriser l'exécution de JavaScript sur cette page.</p>
+            </noscript>
+        </div>
+    </body>
+</html>
