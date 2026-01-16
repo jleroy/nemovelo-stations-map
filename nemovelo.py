@@ -34,7 +34,7 @@ params = {
 
 # Retrieve data from Ecovelo API.
 r = requests.get(
-    'https://api.cyclist.ecovelo.mobi/2025_03_24/stations',
+    'https://api.cyclist.ecovelo.mobi/2025_09_25/stations',
     params=params
 )
 
