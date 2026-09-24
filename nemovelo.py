@@ -23,18 +23,18 @@ user_agent = get_setting_or_exit('NSM_USER_AGENT')
 # Request headers.
 headers = {
     'Content-Type': 'application/json',
-    'User-Agent': user_agent
+    'User-Agent': user_agent,
+    'Program': program,
 }
 
 # Requests parameters.
 params = {
-    'program': program,
     'limit': '100'
 }
 
 # Retrieve data from Ecovelo API.
 r = requests.get(
-    'https://api.cyclist.ecovelo.mobi/2025_09_25/stations',
+    'https://api.cyclist.ecovelo.mobi/2026_06_08/stations',
     params=params,
     headers=headers
 )
