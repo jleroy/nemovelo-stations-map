@@ -14,11 +14,11 @@ def get_setting_or_exit(var_name):
     return setting
 
 # Ecovelo program (e.g. "nemovelo" for Nîmes).
-program    = get_setting_or_exit('ECOVELO_PROGRAM')
+program    = get_setting_or_exit('NSM_ECOVELO_PROGRAM')
 # GeoJSON output file location.
-output     = get_setting_or_exit('OUTPUT_FILENAME')
+output     = get_setting_or_exit('NSM_OUTPUT_FILENAME')
 # User-Agent sent to Ecovelo API.
-user_agent = get_setting_or_exit('USER_AGENT')
+user_agent = get_setting_or_exit('NSM_USER_AGENT')
 
 # Request headers.
 headers = {
