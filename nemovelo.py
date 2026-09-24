@@ -35,7 +35,8 @@ params = {
 # Retrieve data from Ecovelo API.
 r = requests.get(
     'https://api.cyclist.ecovelo.mobi/2025_09_25/stations',
-    params=params
+    params=params,
+    headers=headers
 )
 
 try:
